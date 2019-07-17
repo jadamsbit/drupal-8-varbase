@@ -1,0 +1,19 @@
+
+[32mPreparing composer.json for Varbase updates...(B[0m
+[32mUpdating Varbase...(B[0m
+Please install composer-patches package from Vardot's repository to catch and handle errors when applying patches.
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Nothing to install or update
+Package phpunit/phpunit-mock-objects is abandoned, you should avoid using it. No replacement was suggested.
+Generating autoload files
+> Drupal\Core\Composer\Composer::preAutoloadDump
+> Drupal\Core\Composer\Composer::ensureHtaccess
+PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION), expecting identifier (T_STRING) or \\ (T_NS_SEPARATOR) in /Users/jamieadams/AutomationDev/drupal-8-varbase/vendor/myclabs/deep-copy/src/DeepCopy/deep_copy.php on line 5
+
+Parse error: syntax error, unexpected 'function' (T_FUNCTION), expecting identifier (T_STRING) or \\ (T_NS_SEPARATOR) in /Users/jamieadams/AutomationDev/drupal-8-varbase/vendor/myclabs/deep-copy/src/DeepCopy/deep_copy.php on line 5
+Drush command terminated abnormally due to an unrecoverable error.   [31;40m[1m[error][0m
+Error: syntax error, unexpected 'function' (T_FUNCTION), expecting
+identifier (T_STRING) or \\ (T_NS_SEPARATOR) in
+/Users/jamieadams/AutomationDev/drupal-8-varbase/vendor/myclabs/deep-copy/src/DeepCopy/deep_copy.php,
+line 5

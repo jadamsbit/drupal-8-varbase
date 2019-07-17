@@ -1,22 +1,182 @@
 {
     "name": "drupal/drupal",
-    "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-    "type": "project",
-    "license": "GPL-2.0-or-later",
+    "version": "dev-master",
+    "version_normalized": "9999999-dev",
     "require": {
+        "asm89/stack-cors": "^1.1",
         "composer/installers": "^1.0.24",
+        "composer/semver": "^1.0",
+        "doctrine/annotations": "^1.2",
+        "doctrine/common": "^2.5",
+        "drupal/address": "^1.7",
+        "drupal/core-file-cache": "^8.2",
+        "drupal/core-plugin": "^8.2",
+        "drupal/core-render": "^8.2",
+        "drupal/core-serialization": "^8.2",
+        "drupal/core-utility": "^8.2",
+        "easyrdf/easyrdf": "^0.9",
+        "egulias/email-validator": "^2.0",
+        "ext-date": "*",
+        "ext-dom": "*",
+        "ext-filter": "*",
+        "ext-gd": "*",
+        "ext-hash": "*",
+        "ext-json": "*",
+        "ext-pcre": "*",
+        "ext-pdo": "*",
+        "ext-session": "*",
+        "ext-simplexml": "*",
+        "ext-spl": "*",
+        "ext-tokenizer": "*",
+        "ext-xml": "*",
+        "guzzlehttp/guzzle": "^6.2.1",
+        "masterminds/html5": "^2.1",
+        "paragonie/random_compat": "^1.0|^2.0|^9.99.99",
+        "pear/archive_tar": "^1.4",
+        "php": "^5.5.9|>=7.0.8",
+        "stack/builder": "^1.0",
+        "symfony-cmf/routing": "^1.4",
+        "symfony/class-loader": "~3.4.0",
+        "symfony/console": "~3.4.0",
+        "symfony/dependency-injection": "~3.4.26",
+        "symfony/event-dispatcher": "~3.4.0",
+        "symfony/http-foundation": "~3.4.27",
+        "symfony/http-kernel": "~3.4.14",
+        "symfony/polyfill-iconv": "^1.0",
+        "symfony/polyfill-mbstring": "~1.0",
+        "symfony/process": "~3.4.0",
+        "symfony/psr-http-message-bridge": "^1.0",
+        "symfony/routing": "~3.4.0",
+        "symfony/serializer": "~3.4.0",
+        "symfony/translation": "~3.4.0",
+        "symfony/validator": "~3.4.0",
+        "symfony/yaml": "~3.4.5",
+        "twig/twig": "^1.38.2",
+        "typo3/phar-stream-wrapper": "^2.1.1",
+        "vardot/varbase-updater": "^1.1",
         "wikimedia/composer-merge-plugin": "^1.4",
-        "drupal/address": "^1.7"
+        "zendframework/zend-diactoros": "^1.1",
+        "zendframework/zend-feed": "^2.4"
+    },
+    "conflict": {
+        "drush/drush": "<8.1.10"
     },
     "replace": {
-        "drupal/core": "^8.7"
+        "drupal/action": "^8.7",
+        "drupal/aggregator": "^8.7",
+        "drupal/automated_cron": "^8.7",
+        "drupal/ban": "^8.7",
+        "drupal/bartik": "^8.7",
+        "drupal/basic_auth": "^8.7",
+        "drupal/big_pipe": "^8.7",
+        "drupal/block": "^8.7",
+        "drupal/block_content": "^8.7",
+        "drupal/block_place": "^8.7",
+        "drupal/book": "^8.7",
+        "drupal/breakpoint": "^8.7",
+        "drupal/ckeditor": "^8.7",
+        "drupal/classy": "^8.7",
+        "drupal/color": "^8.7",
+        "drupal/comment": "^8.7",
+        "drupal/config": "^8.7",
+        "drupal/config_translation": "^8.7",
+        "drupal/contact": "^8.7",
+        "drupal/content_moderation": "^8.7",
+        "drupal/content_translation": "^8.7",
+        "drupal/contextual": "^8.7",
+        "drupal/core": "^8.7",
+        "drupal/core-annotation": "^8.7",
+        "drupal/core-assertion": "^8.7",
+        "drupal/core-bridge": "^8.7",
+        "drupal/core-class-finder": "^8.7",
+        "drupal/core-datetime": "^8.7",
+        "drupal/core-dependency-injection": "^8.7",
+        "drupal/core-diff": "^8.7",
+        "drupal/core-discovery": "^8.7",
+        "drupal/core-event-dispatcher": "^8.7",
+        "drupal/core-file-cache": "^8.7",
+        "drupal/core-filesystem": "^8.7",
+        "drupal/core-gettext": "^8.7",
+        "drupal/core-graph": "^8.7",
+        "drupal/core-http-foundation": "^8.7",
+        "drupal/core-php-storage": "^8.7",
+        "drupal/core-plugin": "^8.7",
+        "drupal/core-proxy-builder": "^8.7",
+        "drupal/core-render": "^8.7",
+        "drupal/core-serialization": "^8.7",
+        "drupal/core-transliteration": "^8.7",
+        "drupal/core-utility": "^8.7",
+        "drupal/core-uuid": "^8.7",
+        "drupal/core-version": "^8.7",
+        "drupal/datetime": "^8.7",
+        "drupal/datetime_range": "^8.7",
+        "drupal/dblog": "^8.7",
+        "drupal/dynamic_page_cache": "^8.7",
+        "drupal/editor": "^8.7",
+        "drupal/entity_reference": "^8.7",
+        "drupal/field": "^8.7",
+        "drupal/field_layout": "^8.7",
+        "drupal/field_ui": "^8.7",
+        "drupal/file": "^8.7",
+        "drupal/filter": "^8.7",
+        "drupal/forum": "^8.7",
+        "drupal/hal": "^8.7",
+        "drupal/help": "^8.7",
+        "drupal/history": "^8.7",
+        "drupal/image": "^8.7",
+        "drupal/inline_form_errors": "^8.7",
+        "drupal/jsonapi": "^8.7",
+        "drupal/language": "^8.7",
+        "drupal/layout_builder": "^8.7",
+        "drupal/layout_discovery": "^8.7",
+        "drupal/link": "^8.7",
+        "drupal/locale": "^8.7",
+        "drupal/media": "^8.7",
+        "drupal/media_library": "^8.7",
+        "drupal/menu_link_content": "^8.7",
+        "drupal/menu_ui": "^8.7",
+        "drupal/migrate": "^8.7",
+        "drupal/migrate_drupal": "^8.7",
+        "drupal/migrate_drupal_multilingual": "^8.7",
+        "drupal/migrate_drupal_ui": "^8.7",
+        "drupal/minimal": "^8.7",
+        "drupal/node": "^8.7",
+        "drupal/options": "^8.7",
+        "drupal/page_cache": "^8.7",
+        "drupal/path": "^8.7",
+        "drupal/quickedit": "^8.7",
+        "drupal/rdf": "^8.7",
+        "drupal/responsive_image": "^8.7",
+        "drupal/rest": "^8.7",
+        "drupal/search": "^8.7",
+        "drupal/serialization": "^8.7",
+        "drupal/settings_tray": "^8.7",
+        "drupal/seven": "^8.7",
+        "drupal/shortcut": "^8.7",
+        "drupal/simpletest": "^8.7",
+        "drupal/standard": "^8.7",
+        "drupal/stark": "^8.7",
+        "drupal/statistics": "^8.7",
+        "drupal/syslog": "^8.7",
+        "drupal/system": "^8.7",
+        "drupal/taxonomy": "^8.7",
+        "drupal/telephone": "^8.7",
+        "drupal/text": "^8.7",
+        "drupal/toolbar": "^8.7",
+        "drupal/tour": "^8.7",
+        "drupal/tracker": "^8.7",
+        "drupal/update": "^8.7",
+        "drupal/user": "^8.7",
+        "drupal/views": "^8.7",
+        "drupal/views_ui": "^8.7",
+        "drupal/workflows": "^8.7",
+        "drupal/workspaces": "^8.7"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "config": {
-        "preferred-install": "dist",
-        "autoloader-suffix": "Drupal8"
+    "suggest": {
+        "symfony/expression-language": "For using expressions in service container configuration",
+        "symfony/validator": "Leveraged in the use of context aware plugins."
     },
+    "type": "project",
     "extra": {
         "_readme": [
             "By default Drupal loads the autoloader from ./vendor/autoload.php.",
@@ -34,34 +194,228 @@
             "merge-extra": false
         },
         "installer-paths": {
-            "core": ["type:drupal-core"],
-            "modules/contrib/{$name}": ["type:drupal-module"],
-            "profiles/contrib/{$name}": ["type:drupal-profile"],
-            "themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/contrib/{$name}": ["type:drupal-drush"],
-            "modules/custom/{$name}": ["type:drupal-custom-module"],
-            "themes/custom/{$name}": ["type:drupal-custom-theme"]
+            "core": [
+                "type:drupal-core"
+            ],
+            "modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
         }
     },
     "autoload": {
         "psr-4": {
-            "Drupal\\Core\\Composer\\": "core/lib/Drupal/Core/Composer"
-        }
+            "Drupal\\Core\\Composer\\": "core/lib/Drupal/Core/Composer",
+            "Drupal\\Core\\": [
+                "core/lib/Drupal/Core",
+                "core/lib/Drupal/Core",
+                "core/lib/Drupal/Core"
+            ],
+            "Drupal\\Component\\": [
+                "core/lib/Drupal/Component",
+                "core/lib/Drupal/Component",
+                "core/lib/Drupal/Component"
+            ],
+            "Drupal\\Driver\\": [
+                "core/../drivers/lib/Drupal/Driver",
+                "core/../drivers/lib/Drupal/Driver",
+                "core/../drivers/lib/Drupal/Driver"
+            ],
+            "Drupal\\Component\\Annotation\\": [
+                "core/lib/Drupal/Component/Annotation/",
+                "core/lib/Drupal/Component/Annotation/",
+                "core/lib/Drupal/Component/Annotation/"
+            ],
+            "Drupal\\Component\\Assertion\\": [
+                "core/lib/Drupal/Component/Assertion/",
+                "core/lib/Drupal/Component/Assertion/",
+                "core/lib/Drupal/Component/Assertion/"
+            ],
+            "Drupal\\Component\\Bridge\\": [
+                "core/lib/Drupal/Component/Bridge/",
+                "core/lib/Drupal/Component/Bridge/",
+                "core/lib/Drupal/Component/Bridge/"
+            ],
+            "Drupal\\Component\\ClassFinder\\": [
+                "core/lib/Drupal/Component/ClassFinder/",
+                "core/lib/Drupal/Component/ClassFinder/",
+                "core/lib/Drupal/Component/ClassFinder/"
+            ],
+            "Drupal\\Component\\Datetime\\": [
+                "core/lib/Drupal/Component/Datetime/",
+                "core/lib/Drupal/Component/Datetime/",
+                "core/lib/Drupal/Component/Datetime/"
+            ],
+            "Drupal\\Component\\DependencyInjection\\": [
+                "core/lib/Drupal/Component/DependencyInjection/",
+                "core/lib/Drupal/Component/DependencyInjection/",
+                "core/lib/Drupal/Component/DependencyInjection/"
+            ],
+            "Drupal\\Component\\Diff\\": [
+                "core/lib/Drupal/Component/Diff/",
+                "core/lib/Drupal/Component/Diff/",
+                "core/lib/Drupal/Component/Diff/"
+            ],
+            "Drupal\\Component\\Discovery\\": [
+                "core/lib/Drupal/Component/Discovery/",
+                "core/lib/Drupal/Component/Discovery/",
+                "core/lib/Drupal/Component/Discovery/"
+            ],
+            "Drupal\\Component\\EventDispatcher\\": [
+                "core/lib/Drupal/Component/EventDispatcher/",
+                "core/lib/Drupal/Component/EventDispatcher/",
+                "core/lib/Drupal/Component/EventDispatcher/"
+            ],
+            "Drupal\\Component\\FileCache\\": [
+                "core/lib/Drupal/Component/FileCache/",
+                "core/lib/Drupal/Component/FileCache/",
+                "core/lib/Drupal/Component/FileCache/"
+            ],
+            "Drupal\\Component\\FileSystem\\": [
+                "core/lib/Drupal/Component/FileSystem/",
+                "core/lib/Drupal/Component/FileSystem/",
+                "core/lib/Drupal/Component/FileSystem/"
+            ],
+            "Drupal\\Component\\Gettext\\": [
+                "core/lib/Drupal/Component/Gettext/",
+                "core/lib/Drupal/Component/Gettext/",
+                "core/lib/Drupal/Component/Gettext/"
+            ],
+            "Drupal\\Component\\Graph\\": [
+                "core/lib/Drupal/Component/Graph/",
+                "core/lib/Drupal/Component/Graph/",
+                "core/lib/Drupal/Component/Graph/"
+            ],
+            "Drupal\\Component\\HttpFoundation\\": [
+                "core/lib/Drupal/Component/HttpFoundation/",
+                "core/lib/Drupal/Component/HttpFoundation/",
+                "core/lib/Drupal/Component/HttpFoundation/"
+            ],
+            "Drupal\\Component\\PhpStorage\\": [
+                "core/lib/Drupal/Component/PhpStorage/",
+                "core/lib/Drupal/Component/PhpStorage/",
+                "core/lib/Drupal/Component/PhpStorage/"
+            ],
+            "Drupal\\Component\\Plugin\\": [
+                "core/lib/Drupal/Component/Plugin/",
+                "core/lib/Drupal/Component/Plugin/",
+                "core/lib/Drupal/Component/Plugin/"
+            ],
+            "Drupal\\Component\\ProxyBuilder\\": [
+                "core/lib/Drupal/Component/ProxyBuilder/",
+                "core/lib/Drupal/Component/ProxyBuilder/",
+                "core/lib/Drupal/Component/ProxyBuilder/"
+            ],
+            "Drupal\\Component\\Render\\": [
+                "core/lib/Drupal/Component/Render/",
+                "core/lib/Drupal/Component/Render/",
+                "core/lib/Drupal/Component/Render/"
+            ],
+            "Drupal\\Component\\Serialization\\": [
+                "core/lib/Drupal/Component/Serialization/",
+                "core/lib/Drupal/Component/Serialization/",
+                "core/lib/Drupal/Component/Serialization/"
+            ],
+            "Drupal\\Component\\Transliteration\\": [
+                "core/lib/Drupal/Component/Transliteration/",
+                "core/lib/Drupal/Component/Transliteration/",
+                "core/lib/Drupal/Component/Transliteration/"
+            ],
+            "Drupal\\Component\\Utility\\": [
+                "core/lib/Drupal/Component/Utility/",
+                "core/lib/Drupal/Component/Utility/",
+                "core/lib/Drupal/Component/Utility/"
+            ],
+            "Drupal\\Component\\Uuid\\": [
+                "core/lib/Drupal/Component/Uuid/",
+                "core/lib/Drupal/Component/Uuid/",
+                "core/lib/Drupal/Component/Uuid/"
+            ],
+            "Drupal\\Component\\Version\\": [
+                "core/lib/Drupal/Component/Version/",
+                "core/lib/Drupal/Component/Version/",
+                "core/lib/Drupal/Component/Version/"
+            ]
+        },
+        "classmap": [
+            "core/lib/Drupal.php",
+            "core/lib/Drupal/Component/Utility/Timer.php",
+            "core/lib/Drupal/Component/Utility/Unicode.php",
+            "core/lib/Drupal/Core/Database/Database.php",
+            "core/lib/Drupal/Core/DrupalKernel.php",
+            "core/lib/Drupal/Core/DrupalKernelInterface.php",
+            "core/lib/Drupal/Core/Site/Settings.php",
+            "core/lib/Drupal.php",
+            "core/lib/Drupal/Component/Utility/Timer.php",
+            "core/lib/Drupal/Component/Utility/Unicode.php",
+            "core/lib/Drupal/Core/Database/Database.php",
+            "core/lib/Drupal/Core/DrupalKernel.php",
+            "core/lib/Drupal/Core/DrupalKernelInterface.php",
+            "core/lib/Drupal/Core/Site/Settings.php",
+            "core/lib/Drupal.php",
+            "core/lib/Drupal/Component/Utility/Timer.php",
+            "core/lib/Drupal/Component/Utility/Unicode.php",
+            "core/lib/Drupal/Core/Database/Database.php",
+            "core/lib/Drupal/Core/DrupalKernel.php",
+            "core/lib/Drupal/Core/DrupalKernelInterface.php",
+            "core/lib/Drupal/Core/Site/Settings.php"
+        ]
     },
     "scripts": {
-        "pre-autoload-dump": "Drupal\\Core\\Composer\\Composer::preAutoloadDump",
-        "post-autoload-dump": "Drupal\\Core\\Composer\\Composer::ensureHtaccess",
-        "post-package-install": "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
-        "post-package-update": "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
-        "drupal-phpunit-upgrade-check": "Drupal\\Core\\Composer\\Composer::upgradePHPUnit",
-        "drupal-phpunit-upgrade": "@composer update phpunit/phpunit phpspec/prophecy symfony/yaml --with-dependencies --no-progress",
-        "phpcs": "phpcs --standard=core/phpcs.xml.dist --runtime-set installed_paths $($COMPOSER_BINARY config vendor-dir)/drupal/coder/coder_sniffer --",
-        "phpcbf": "phpcbf --standard=core/phpcs.xml.dist --runtime-set installed_paths $($COMPOSER_BINARY config vendor-dir)/drupal/coder/coder_sniffer --"
+        "pre-autoload-dump": [
+            "Drupal\\Core\\Composer\\Composer::preAutoloadDump"
+        ],
+        "post-autoload-dump": [
+            "Drupal\\Core\\Composer\\Composer::ensureHtaccess"
+        ],
+        "post-package-install": [
+            "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
+        ],
+        "post-package-update": [
+            "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
+        ],
+        "drupal-phpunit-upgrade-check": [
+            "Drupal\\Core\\Composer\\Composer::upgradePHPUnit"
+        ],
+        "drupal-phpunit-upgrade": [
+            "@composer update phpunit/phpunit phpspec/prophecy symfony/yaml --with-dependencies --no-progress"
+        ],
+        "phpcs": [
+            "phpcs --standard=core/phpcs.xml.dist --runtime-set installed_paths $($COMPOSER_BINARY config vendor-dir)/drupal/coder/coder_sniffer --"
+        ],
+        "phpcbf": [
+            "phpcbf --standard=core/phpcs.xml.dist --runtime-set installed_paths $($COMPOSER_BINARY config vendor-dir)/drupal/coder/coder_sniffer --"
+        ]
     },
-    "repositories": [
-        {
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "description": "Drupal is an open source content management platform powering millions of websites and applications.",
+    "repositories": {
+        "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "packagist.org": {
+            "type": "composer",
+            "url": "https?://repo.packagist.org",
+            "allow_ssl_downgrade": true
         }
-    ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

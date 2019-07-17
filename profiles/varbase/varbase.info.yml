@@ -7,14 +7,18 @@ distribution:
   name: Varbase
   install:
     theme: vartheme_admin
-# version: 8.x-6.11
+# version: 8.x-7.0
 install:
   - system
   - action
   - user
   - node
   - block
+  - datetime
   - help
+  - image
+  - views
+  - file
 themes:
   - adminimal_theme
   - bootstrap_barrio
@@ -24,8 +28,8 @@ themes:
 interface translation project: varbase
 interface translation server pattern: profiles/varbase/translations/%language.po
 
-# Information added by Drupal.org packaging script on 2019-05-23
-version: '8.x-6.11'
+# Information added by Drupal.org packaging script on 2019-07-06
+version: '8.x-7.0'
 core: '8.x'
 project: 'varbase'
-datestamp: 1558636330
+datestamp: 1562452180
